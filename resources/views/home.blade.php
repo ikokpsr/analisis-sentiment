@@ -4,8 +4,7 @@
 
 @section('content')
 
-<div class="flex h-screen bg-gray-100">
-    @include('components.sidebar')
+<div >
     <div class="flex flex-col flex-1">
         @include('components.navbar')
         <main class="flex-1 p-4">
@@ -14,9 +13,24 @@
                 {{ session('status') }}
             </div>
         @endif
-        <div class="text-center text-xl">
-            {{ __('Selamat Datang') }}
+        <div class="text-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            <span class="inline-flex p-4 font-bold">
+                <span class="text-blue-500 uppercase">Insight</span>
+                <span class="text-purple-500 uppercase">ify</span>
+            </span>
         </div>
+        <div class="bg-white bg-opacity-70 shadow-md rounded-md p-10 mx-auto my-6 max-w-2xl">
+            <p class="prose lg:prose-xl text-gray-700 text-lg mb-8 text-justify">
+                Website ini dibuat untuk memberikan wawasan mendalam tentang persepsi pelanggan terhadap suatu merek melalui analisis sentimen komentar produk menggunakan algoritma Naive Bayes. Dengan pendekatan ini, bertujuan untuk memberikan pemahaman yang akurat dan efisien terhadap sentimen pelanggan, yang selanjutnya dapat menjadi landasan untuk pengambilan keputusan bisnis yang lebih baik.
+            </p>
+            <!--<p class="text-gray-500 text-center text-sm">-->
+            <!--    Terimakasih! -->
+            <!--</p>-->
+        </div>
+
+
+
+
 
         
         {{-- <div class="bg-gray-100 p-4 rounded-lg">

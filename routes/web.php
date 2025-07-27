@@ -56,4 +56,5 @@ Route::resource('/insight/shopee', ShopeeInsightController::class);
 Route::get('/insight/shopee', [ShopeeInsightController::class, 'index'])->name('shopee-insight.index');
 Route::get('/api/pie-chart-data', [ShopeeInsightController::class, 'getPieChartData']);
 
-Route::get('/test', [HomeController::class, 'test'])->name('test');
+Route::get('/test', [APIShopeeController::class, 'test'])->name('test');
+Route::get('/shopee/test-connection', [APIShopeeController::class, 'testConnection']);

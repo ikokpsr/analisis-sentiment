@@ -9,16 +9,16 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "facebook/graph-sdk": "^5.1",
         "guzzlehttp/guzzle": "^7.7",
         "jstolpe/instagram-graph-api-php-sdk": "^1.0",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.2",
+        "nesbot/carbon": "^2.72",
         "openai-php/laravel": "^0.6.0",
         "php-ai/php-ml": "^0.10.0",
-        "rubix/ml": "^2.4",
+        "rubix/ml": "^2.5",
         "sastrawi/sastrawi": "1",
         "spatie/simple-excel": "^3.2"
     },

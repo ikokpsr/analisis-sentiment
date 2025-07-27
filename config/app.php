@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
+ini_set('memory_limit', '2G');
 return [
 
     /*
