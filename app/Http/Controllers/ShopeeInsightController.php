@@ -73,4 +73,5 @@ class ShopeeInsightController extends Controller
 
         return compact('positifTotal', 'netralTotal', 'negatifTotal');
     }
+    
 }

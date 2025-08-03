@@ -193,10 +193,19 @@
                     data: [data.positifTotal, data.netralTotal, data.negatifTotal],
                     backgroundColor: ['#57e187', '#d1d5db', '#ef4444']
                 }]
+            },
+            options: {
+                plugins: {
+                    labels: {
+                        render: 'percentage',
+                        fontColor: ['black', 'black', 'black'],
+                        precision: 2,
+                        fontStyle: 'bold'
+                    }
+                }
             }
         });
     }
-
     // Call the fetchData function to initially populate the chart
     fetchData();
 </script>
@@ -241,6 +250,18 @@
                 tooltip: {
                     mode: 'index',
                     intersect: false
+                },
+                labels: {
+                    render: function (args) {
+                        if (args.value === 0) return ''; // hide zero values
+                        return args.value;
+                    },
+                    fontColor: '#000',
+                    fontStyle: 'bold',
+                    precision: 0,
+                    fontSize: 14,
+                    position: 'outside',
+                    textMargin: 8
                 }
             },
             scales: {

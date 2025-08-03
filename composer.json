@@ -19,7 +19,7 @@
         "openai-php/laravel": "^0.6.0",
         "php-ai/php-ml": "^0.10.0",
         "rubix/ml": "^2.5",
-        "sastrawi/sastrawi": "1",
+        "sastrawi/sastrawi": "^1.2",
         "spatie/simple-excel": "^3.2"
     },
     "require-dev": {

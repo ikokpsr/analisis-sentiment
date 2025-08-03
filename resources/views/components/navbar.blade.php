@@ -66,7 +66,7 @@
 <!--  </script>-->
 <!--  <script>-->
 <!--  </script>-->
-    <header class="bg-white">
+    {{-- <header class="bg-white">
       <nav class="flex justify-between items-center w-[92%] mx-auto">
         <div>
           <!-- <img class="w-16 cursor-pointer" src="https://weddingmu.online/icon/AnaSen.png" alt="..."> -->
@@ -123,5 +123,96 @@
         e.name = e.name === "menu" ? "close" : "menu";
         navLinks.classList.toggle("top-[9%]");
       }
-    </script>
+    </script> --}}
+
+    <header class="bg-white">
+      <nav class="flex justify-between items-center w-[92%] mx-auto">
+        <div>
+          <span class="inline-flex p-4 text-xl font-bold text-black uppercase">
+            Insightify
+          </span>
+        </div>
+        <div
+          class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+            <li>
+              <a class="hover:text-gray-500" href="/home">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="{{ route('shopee.sentiment') }}">
+                Sentiment Analysis
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="{{ route('shopee-insight.index') }}">
+                Insight
+              </a>
+            </li>
+
+            <!-- Dropdown New Sentiment -->
+            <li class="relative">
+              <button
+                id="dropdownToggle"
+                class="hover:text-gray-500 flex items-center gap-1 focus:outline-none"
+                onclick="toggleDropdown()"
+              >
+                New Sentiment
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <ul
+                id="dropdownMenu"
+                class="absolute hidden bg-white shadow-md rounded-md py-2 w-40 mt-2 z-10"
+              >
+                <li>
+                  <a href="{{ route('sentiment-new.index') }}" class="block px-4 py-2 hover:bg-gray-100">Upload Data Set</a>
+                </li>
+                <li>
+                  <a href="{{ route('sentimen.teks') }}" class="block px-4 py-2 hover:bg-gray-100">Input Text Analisis</a>
+                </li>
+                <li>
+                  <a href="{{ route('sentimen.file') }}" class="block px-4 py-2 hover:bg-gray-100">Input File Analisis</a>
+                </li>
+              </ul>
+            </li>
+            <!-- End Dropdown -->
+
+          </ul>
+        </div>
+        <div class="flex items-center gap-6">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+<script>
+  const navLinks = document.querySelector(".nav-links");
+  function onToggleMenu(e) {
+    e.name = e.name === "menu" ? "close" : "menu";
+    navLinks.classList.toggle("top-[9%]");
+  }
+
+  function toggleDropdown() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("hidden");
+  }
+
+  // OPTIONAL: Klik di luar dropdown untuk menutup dropdown
+  document.addEventListener("click", function (event) {
+    const toggle = document.getElementById("dropdownToggle");
+    const menu = document.getElementById("dropdownMenu");
+
+    if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+      menu.classList.add("hidden");
+    }
+  });
+</script>
+
       

@@ -507,7 +507,7 @@ class SentimentsController extends Controller
             'jd' => 'jadi',
             'bs' => 'bisa',
             'gmn' => 'bagaimana',
-            'dh' => 'dah',
+            'dh' => 'sudah',
             'cm' => 'cuma',
             'btw' => 'by the way',
             'bb' => 'bukan',
@@ -518,7 +518,7 @@ class SentimentsController extends Controller
             'gmn' => 'bagaimana',
             'tmn' => 'teman',
             'plg' => 'pulang',
-            'gpp' => 'gak papa',
+            'gpp' => 'tidak apa apa',
             'jln' => 'jalan',
             'lbh' => 'lebih',
             'tpi' => 'tapi',
@@ -718,7 +718,7 @@ class SentimentsController extends Controller
                     $samples[] = array_slice($row, 0, -1); // Semua kolom kecuali yang terakhir
                     $labels[] = end($row); // Kolom terakhir sebagai label
                 }
-                dd($samples);
+                // dd($samples);
             } catch (\Throwable $th) {
                 return redirect()->back()->with('error', 'Terjadi kesalahan dalam proses.');
             }

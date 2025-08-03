@@ -23,6 +23,7 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <!-- Required chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-labels@1.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 <body class="font-[Poppins] bg-gray-100 h-screen>

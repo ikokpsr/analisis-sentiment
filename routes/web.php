@@ -9,6 +9,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ShopeeInsightController;
 use App\Http\Controllers\OpenAIController;
+use App\Http\Controllers\SentimentsNewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +59,11 @@ Route::get('/api/pie-chart-data', [ShopeeInsightController::class, 'getPieChartD
 
 Route::get('/test', [APIShopeeController::class, 'test'])->name('test');
 Route::get('/shopee/test-connection', [APIShopeeController::class, 'testConnection']);
+
+// new sentiments
+Route::get('/sentiment-new', [SentimentsNewController::class, 'index'])->name('sentiment-new.index');
+Route::post('/sentiment-new/create-model', [SentimentsNewController::class, 'createModel'])->name('createModel.data');
+Route::get('/sentiment-new/teks', [SentimentsNewController::class, 'sentimenteks'])->name('sentimen.teks');
+Route::post('/sentiment-new/analisis', [SentimentsNewController::class, 'analisis'])->name('analisis.analyze');
+Route::get('/sentiment-new/file', [SentimentsNewController::class, 'sentimenfile'])->name('sentimen.file');
+Route::post('/sentiment-new/analisisFile', [SentimentsNewController::class, 'analisisFile'])->name('analisis.file');
